@@ -41,4 +41,25 @@ class Chapter_001Test extends TestCase
         $this->assertSame('hello world', Chapter_001::smash(["hello", "world"]));
         $this->assertSame('halo dunia selamat bermain', Chapter_001::smash(['halo', 'dunia', 'selamat', 'bermain']));
     }
+
+
+    function test_zeroFuel()
+    {
+        $this->assertSame(true, Chapter_001::zeroFuel(50, 25, 2));
+        $this->assertSame(false, Chapter_001::zeroFuel(100, 50, 1));
+    }
+
+
+    function test_dnaToRna()
+    {
+        $this->assertSame('UUUU', Chapter_001::dnaToRna("TTTT"));
+        $this->assertSame('GCAU', Chapter_001::dnaToRna("GCAT"));
+        $this->assertSame("", Chapter_001::dnaToRna(""));
+        $this->assertSame('U', Chapter_001::dnaToRna("T"));
+        $this->assertSame('GACCGCCGCC', Chapter_001::dnaToRna("GACCGCCGCC"));
+        $this->assertSame('GAUUCCACCGACUUCCCAAGUACCGGAAGCGCGACCAACUCGCACAGC', Chapter_001::dnaToRna("GATTCCACCGACTTCCCAAGTACCGGAAGCGCGACCAACTCGCACAGC"));
+        $this->assertSame('CACGACAUACGGAGCAGCGCACGGUUAGUACAGCUGUCGGUGAACUCCAUGACA', Chapter_001::dnaToRna("CACGACATACGGAGCAGCGCACGGTTAGTACAGCTGTCGGTGAACTCCATGACA"));
+        $this->assertSame('CACGACAUACGGAGCAGCGCACGGUUAGUACAGCUGUCGGUGAACUCCAUGACA', Chapter_001::dnaToRna("CACGACATACGGAGCAGCGCACGGTTAGTACAGCTGTCGGTGAACTCCATGACA"));
+        $this->assertSame('AACCCUGUCCACCAGUAACGUAGGCCGACGGGAAAAAUAAACGAUCUGUCAAUG', Chapter_001::dnaToRna("AACCCTGTCCACCAGTAACGTAGGCCGACGGGAAAAATAAACGATCTGTCAATG"));
+    }
 }

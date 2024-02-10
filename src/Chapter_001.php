@@ -50,4 +50,27 @@ class Chapter_001
 
         return trim($result);
     }
+
+
+    // 5 - Will you make it?
+    // https://www.codewars.com/kata/5861d28f124b35723e00005e
+    public static function zeroFuel($distanceToPump, $mpg, $fuelLeft)
+    {
+        return $distanceToPump <= $mpg * $fuelLeft;
+    }
+
+
+    // 6 - DNA to RNA Conversion
+    // https://www.codewars.com/kata/5556282156230d0e5e000089
+    public static function dnaToRna($str)
+    {
+        $result = '';
+        $array = str_split($str);
+
+        for ($i = 0; $i < count($array); $i++) {
+            $array[$i] == "T" ? $result .= "U" : $result .= $array[$i];
+        }
+
+        return $result;
+    }
 }
