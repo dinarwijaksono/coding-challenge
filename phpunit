@@ -1,3 +1,3 @@
 <?php
 
-system("./vendor/bin/phpunit ./tests --filter Chapter_001Test::test_hero");
+system("./vendor/bin/phpunit ./tests --filter Chapter_001Test::test_smash");

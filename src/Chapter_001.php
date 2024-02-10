@@ -37,4 +37,17 @@ class Chapter_001
     {
         return $bullets >= $dragons * 2;
     }
+
+
+    // 4 - Sentence Smash
+    // https://www.codewars.com/kata/53dc23c68a0c93699800041d
+    public static function smash(array $words): string
+    {
+        $result = '';
+        for ($i = 0; $i < count($words); $i++) {
+            $result .= $words[$i] . " ";
+        }
+
+        return trim($result);
+    }
 }

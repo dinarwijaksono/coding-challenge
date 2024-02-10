@@ -32,4 +32,13 @@ class Chapter_001Test extends TestCase
         $this->assertEquals(false, Chapter_001::hero(1500, 751));
         $this->assertEquals(false, Chapter_001::hero(0, 1));
     }
+
+
+    function test_smash()
+    {
+        $this->assertSame('', Chapter_001::smash([]));
+        $this->assertSame('hello', Chapter_001::smash(["hello"]));
+        $this->assertSame('hello world', Chapter_001::smash(["hello", "world"]));
+        $this->assertSame('halo dunia selamat bermain', Chapter_001::smash(['halo', 'dunia', 'selamat', 'bermain']));
+    }
 }
