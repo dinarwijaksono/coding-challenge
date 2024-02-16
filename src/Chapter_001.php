@@ -86,4 +86,17 @@ class Chapter_001
 
         return $z;
     }
+
+
+    // 8 - If you can't sleep, just count sheep!!
+    // https://www.codewars.com/kata/5b077ebdaf15be5c7f000077/train/php
+    public static function countSheep(int $num): string
+    {
+        $result = '';
+        for ($i = 0; $i < $num; $i++) {
+            $result .= $i + 1 . " sheep...";
+        }
+
+        return $result;
+    }
 }

@@ -1,3 +1,3 @@
 <?php
 
-system("./vendor/bin/phpunit ./tests --filter Chapter_001Test::test_countBy");
+system("./vendor/bin/phpunit ./tests --filter Chapter_001Test::test_countSheep");

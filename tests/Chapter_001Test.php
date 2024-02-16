@@ -69,4 +69,12 @@ class Chapter_001Test extends TestCase
         $this->assertSame([1, 2, 3, 4, 5], Chapter_001::countBy(1, 5), "Array does not match");
         $this->assertSame([2, 4, 6, 8, 10], Chapter_001::countBy(2, 5), "Array does not match");
     }
+
+    function test_countSheep()
+    {
+        $this->assertSame('', Chapter_001::countsheep(0));
+        $this->assertSame('1 sheep...', Chapter_001::countsheep(1));
+        $this->assertSame('1 sheep...2 sheep...', Chapter_001::countsheep(2));
+        $this->assertSame('1 sheep...2 sheep...3 sheep...', Chapter_001::countsheep(3));
+    }
 }
