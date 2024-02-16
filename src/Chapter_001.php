@@ -73,4 +73,17 @@ class Chapter_001
 
         return $result;
     }
+
+
+    // 7 - Count by X
+    // https://www.codewars.com/kata/5513795bd3fafb56c200049e/train/php
+    public static function countBy(int $x, int $n): array
+    {
+        $z = [];
+        for ($i = 0; $i < $n; $i++) {
+            $z[] = ($i + 1) * $x;
+        }
+
+        return $z;
+    }
 }

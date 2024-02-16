@@ -62,4 +62,11 @@ class Chapter_001Test extends TestCase
         $this->assertSame('CACGACAUACGGAGCAGCGCACGGUUAGUACAGCUGUCGGUGAACUCCAUGACA', Chapter_001::dnaToRna("CACGACATACGGAGCAGCGCACGGTTAGTACAGCTGTCGGTGAACTCCATGACA"));
         $this->assertSame('AACCCUGUCCACCAGUAACGUAGGCCGACGGGAAAAAUAAACGAUCUGUCAAUG', Chapter_001::dnaToRna("AACCCTGTCCACCAGTAACGTAGGCCGACGGGAAAAATAAACGATCTGTCAATG"));
     }
+
+
+    function test_countBy()
+    {
+        $this->assertSame([1, 2, 3, 4, 5], Chapter_001::countBy(1, 5), "Array does not match");
+        $this->assertSame([2, 4, 6, 8, 10], Chapter_001::countBy(2, 5), "Array does not match");
+    }
 }
